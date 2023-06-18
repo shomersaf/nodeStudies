@@ -102,4 +102,16 @@ usersRouter.delete("/delete/:email", (req, res) => {
     if (data) return res.send("User deleted. Users List updated").json(data)
 })
 
+usersRouter.get("/new/:name/:gender/:email/:age/:balance/:company", (req, res) => {
+    const newUser ={"balance":req?.params?.balance,"picture":"#","age":req?.params?.age,"name":req?.params?.name,"gender":req?.params?.gender,"company":req?.params?.company,"email":req?.params?.email}
+     users.push(newUser)
+    fs.writeFile("./data/users.js",`${JSON.stringify(users)}` 
+    , function(error){
+        if(error) throw error;     
+    })
+  return res.json("user added")
+  
+})
+
+
 export { usersRouter }
