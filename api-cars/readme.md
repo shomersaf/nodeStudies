@@ -2,7 +2,7 @@
 1. create new router - /users +
 2. GET users/:email will return the user with the requested email +
 3. GET  users/:gender will return all the users with the requested gender+
-4. DELETE users/:email will remove the user from the users array by email 
+4. DELETE users/:email will remove the user from the users array by email - NO ui FOR DELETE METHOD _ works in postman!
 5. GET users/new/:email/:age/:balance/:company - adding new user to the array ( we will change it to POST)
 
 
