@@ -4,7 +4,7 @@ import zod from "zod"
 const router = express.Router();
 const users = [];
 export const tokens = []
-export const sessions = []
+
 
 const signupSchema = zod.object({
     email: zod.string(),

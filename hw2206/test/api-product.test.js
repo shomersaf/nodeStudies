@@ -11,7 +11,7 @@ describe("POST /Product", function () {
             images: ["a"],
             rating: 1.2
         }
-        const token=1
+        const token=11
         const result = await axios.post(`http://localhost:4000/products/new/${token}`, product)
         const { data } = result;
         expect(result.status).equal(200)
@@ -26,7 +26,7 @@ describe("POST /Product", function () {
                 images: ["a"],
                 rating: 1.2
             }
-            const token=1
+            const token=11
             const result = await axios.post(`http://localhost:4000/products/new/${token}`, product)
             throw new Error("FAILED")
         } catch (error) {

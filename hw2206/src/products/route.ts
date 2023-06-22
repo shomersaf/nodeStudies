@@ -2,7 +2,7 @@
 import express from "express"
 import products from "./data"
 import zod from "zod"
-import { sessions, tokens } from "../auth/route";
+import { tokens } from "../auth/route";
 
 // import { tokens } from "../auth/route";
 const router = express.Router();
@@ -15,18 +15,6 @@ const productBody = zod.object({
     category: zod.enum(["dairy", "drinks", "food", "fruits",])
 })
 
-
-
-router.get("/", function (req, res, next) {
-    return res.json(products)
-})
-
-
-router.get("/:id", function (req, res, next) {
-    return res.json(products) // filter by id
-})
-
-
 function tokenMiddleware(req, res, next) {
     try {
         console.log(req.body.token)
@@ -36,6 +24,20 @@ function tokenMiddleware(req, res, next) {
         return res.status(400).send("whaaat?????")
     }
 }
+
+router.get("/:token", tokenMiddleware, function (req, res, next) {
+    return res.json(products)
+})
+
+
+router.get("/:id/:token", tokenMiddleware, function (req, res, next) {
+    const currentProduct = products.find(product => product.id === +req.params.id)
+    currentProduct? res.json(currentProduct) :  res.send("not found")
+    
+})
+
+
+
 
 router.post("/new/:token", tokenMiddleware, function (req, res, next) {
 
@@ -79,7 +81,7 @@ router.post("/new/:token", tokenMiddleware, function (req, res, next) {
 
 
 
-router.put("/:pid", function (req, res, next) {
+router.put("/:pid/:token", tokenMiddleware, function (req, res, next) {
     try {
         productBody.parse(req.body)
         const currentIndex = products.findIndex(cid => cid.id === +req.params.pid)
