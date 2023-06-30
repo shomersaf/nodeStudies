@@ -17,7 +17,9 @@ export default function ProductsPage() {
     async function getProducts() {
         try {
             setAreProductsLoading(true)
-            const result = await axios.get(productsUrl)
+            const result = await axios.get(productsUrl,{headers:{
+                Authorization: localStorage.getItem("token")
+            }})
             const { data } = result;
             console.log(result.data)
             if (result.data) setProducts(data)

@@ -2,12 +2,13 @@
 import express from "express"
 import jsonwebtoken from "jsonwebtoken"
 import zod from "zod"
-import dotenv from "dotenv"
-dotenv.config()
+//import dotenv from 'dotenv/config'
+import 'dotenv/config'
+//dotenv.config()
 
 
 const router = express.Router();
-const users = [];
+const users = [{email: "q", password: "q"}];
 export const tokens = []
 
 const signupSchema = zod.object({
