@@ -4,7 +4,7 @@ import { Column } from 'primereact/column';
 import { IEmployee } from '../api';
 
 
-export default function EmployeesTable(props: { employees: Array<IEmployee> }) {
+export default function EmployeesTable(props: { employees: Array<IEmployee>, range:any }) {
     if (!props.employees[0]) return null;
     const columns = [<Column field={"id"} header={"id"}></Column>,
     <Column field={"surname"} header={"surname"}></Column>,
@@ -17,8 +17,8 @@ export default function EmployeesTable(props: { employees: Array<IEmployee> }) {
         <div className="card">
             <DataTable value={props.employees} tableStyle={{ minWidth: '50rem' }}>
                 {props.employees[0]?
-                    Object.keys(props.employees[0]).map(key => {
-                        return <Column field={key} header={key}></Column>
+                    Object.keys(props.employees[0]).map(item => {
+                        return <Column field={item} header={item} key={item}></Column>
                     })
                     : columns
                 }

@@ -1,6 +1,9 @@
 import './App.css'
 import { useState } from "react"
 import { Header } from './components/ui-components/header'
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";  
+import 'primeicons/primeicons.css';
 import CountriesPage from './components/pages/countries'
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom"
 import { Button } from 'primereact/button'

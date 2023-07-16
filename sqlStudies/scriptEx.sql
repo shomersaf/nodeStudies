@@ -46,6 +46,17 @@ SELECT * FROM teacher WHERE id > 2 AND age < 45;
 USE sql_course;
 SELECT * FROM teacher WHERE id > 2 AND age < 45;
 SELECT * FROM teacher WHERE id > 2 OR age < 45;
-
-
-
+SELECT * FROM teacher WHERE NOT id=2;
+SELECT * FROM sql_course.teacher WHERE NOT id=2;
+SELECT * FROM sql_course.teacher WHERE age BETWEEN 20 AND 40;
+DELETE FROM sql_course.teacher WHERE surname = 'Ivanov';
+INSERT INTO sql_course.lesson (name, teacher_id) VALUES ("maths", 2), ("american maths", 2), (" russian maths", 4), ("geography", 2), ("tne new methodology of UFO archeology", 5);
+SELECT sql_course.teacher.surname, sql_course.lesson.name FROM sql_course.teacher INNER JOIN sql_course.lesson ON sql_course.teacher.id = sql_course.lesson.teacher_id;
+SELECT sql_course.teacher.surname, sql_course.lesson.name FROM sql_course.teacher LEFT OUTER JOIN sql_course.lesson ON sql_course.teacher.id = sql_course.lesson.teacher_id;
+SELECT sql_course.teacher.surname, sql_course.lesson.name FROM sql_course.teacher RIGHT OUTER JOIN sql_course.lesson ON sql_course.teacher.id = sql_course.lesson.teacher_id;
+SELECT * FROM sql_course.teacher UNION SELECT * FROM sql_course.lesson;
+SELECT * FROM sql_course.lesson UNION SELECT * FROM sql_course.teacher;
+SELECT SUM(age) FROM sql_course.teacher;
+INSERT INTO sql_course.teacher (surname, age) VALUES ("Pupkin",25),  ("Shishkin",30);
+SELECT age, COUNT(age) FROM sql_course.teacher GROUP BY age;
+SELECT teacher_id, COUNT(teacher_id) FROM sql_course.lesson GROUP BY teacher_id;

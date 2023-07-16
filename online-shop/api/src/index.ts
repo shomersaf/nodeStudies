@@ -1,6 +1,6 @@
 // const express = require("express")
 import express, { Request, Response, NextFunction } from "express"
-import { productsRouter, cartRouter, authRouter, countriesRouter, employeesRouter,customersRouter } from "./routes.index" 
+import { productsRouter, cartRouter, employeesRouter, authRouter, countriesRouter,customersRouter } from "./routes.index" 
 import { addRequestId } from "./middleware/addRequestId"
 import { addRequestStarted } from "./middleware/addRequestStarted"
 import { addRequestFinished } from "./middleware/addRequestFinished"

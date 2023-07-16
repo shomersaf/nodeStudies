@@ -1,13 +1,18 @@
 import { useEffect, useState, useTransition } from "react"
-import axios from "axios"
+// import axios from "axios"
 import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
+// import { InputText } from 'primereact/inputtext';
+// import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";  
+import 'primeicons/primeicons.css';
 import { Header } from "../../ui-components/header";
+import { Calendar } from 'primereact/calendar';
 // import { WithLoading } from "../../ui-components/with-loading";
 import { useNavigate } from "react-router-dom";
 import { IEmployee, betweenEmployeesService, getAllEmployeesService  } from "./api";
 import EmployeesTable from "./table";
-// import BeetweenEmployees from "./between";
+
+
 
 
 
@@ -15,47 +20,47 @@ import EmployeesTable from "./table";
 export default function CustomersPage() {
     const navigate = useNavigate()
     const [employees, setEmployees] = useState<Array<IEmployee>>([])
-    // const [rows, setNumOfRows] = useState(10)
-    // const [totalRows, setTotalRows] = useState(0)
+     
+     const [dateRange1, setDateRange1] = useState(null)
+     const [dateRange2, setDateRange2] = useState(null)
 
     async function getEmployeesAction() {
         try {
             const result = await getAllEmployeesService()
             setEmployees(result)
         } catch (error) {
-            alert("error")
+            alert("employees are not ok! omg! error!")
         }
     }
 
-    // async function getCustomersCountAction() {
-    //     try {
-    //         const result = await getCustomersCountService()
-    //         setTotalRows(result)
-    //     } catch (error) {
-    //         alert("error")
-    //     }
-    // }
+
     useEffect(() => {
 
         getEmployeesAction()
-        //getCustomersCountAction()
+
+        handleBetweenApi()
         return () => {
             console.log("Unmount!")
         }
     }, [])//rows])
-    async function handleBetweenApi(searchText: string) {
+    async function handleBetweenApi(dateRange1,dateRange2) {
         try {
-            const result = await betweenEmployeesService(searchText)
+            const result = await betweenEmployeesService(dateRange1,dateRange2)
+            console.log(result)
+            //whaaat?????
             setEmployees(result)
+
         } catch (error) {
-            alert("error")
+            alert("error!!!! alarm! alarm!")
         }
     }
     return <div >
         <Header text="Employees Page" />
-        {/* <BetweenEmployees searchAction={handleBetweenApi} allAction={getEmployeesAction} /> */}
-       
-        <EmployeesTable employees={employees} />
+        <Calendar value={dateRange1} onChange={(e) => setDateRange1(e.value as any)} />
+        <Calendar value={dateRange2} onChange={(e) => setDateRange2(e.value as any)} />
+        <Button onClick ={()=>{handleBetweenApi(dateRange1,dateRange2)}}>Show</Button>
+        <Button onClick ={()=>{setDateRange1(null);setDateRange2(null)}}>Clear</Button>
+        <EmployeesTable employees={employees} range={dateRange1}/>
     </div>
 }
 

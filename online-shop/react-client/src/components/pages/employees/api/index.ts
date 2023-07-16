@@ -28,11 +28,13 @@ async function getAllEmployeesService(): Promise<Array<IEmployee>> {
 
 
 
-async function betweenEmployeesService(value: string): Promise<Array<IEmployee>> {
-    const { data, headers } = await axios.get(`http://localhost:4000/customers/search?q=${value}`)
-    if (!Array.isArray(data)) throw new Error(`Error Please contact support ${headers["x-request-id"]}`)
+async function betweenEmployeesService(dateRange1:any,dateRange2:any): Promise<Array<IEmployee>> {
 
-    const employees: Array<IEmployee> = data.map(e => {
+    const { data, headers } = await axios.get(`http://localhost:4000/employees/between:${dateRange1}:${dateRange2}`)
+    // console.log(data.count[0])
+    if (!Array.isArray(data.count[0])) throw new Error(`Error Please contact support ${headers["x-request-id"]}`)
+
+    const employees: Array<IEmployee> = data.count[0].map(e => {
         return {
             id: e.EmployeeID,
             surname: e.LastName,

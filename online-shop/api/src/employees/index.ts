@@ -6,7 +6,7 @@ import { getEmployeesBetweenHandler } from "./handlers/getEmployeesBetweenHandle
 const employeesRouter = express.Router();
 
 employeesRouter.get("/", getEmployees)
-
+employeesRouter.get("/between:dateRange1:dateRange2", getEmployeesBetween)
 
 async function getEmployees(req: Request, res: Response, next: NextFunction) {
     try {
