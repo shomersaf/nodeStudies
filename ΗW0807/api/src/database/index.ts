@@ -6,7 +6,7 @@ const pool = mysql2.createPool({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: 'root',
+  password: 'admin',
   database: 'northwind',
   waitForConnections: true,
   connectionLimit: 10.

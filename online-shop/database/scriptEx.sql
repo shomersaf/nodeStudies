@@ -65,59 +65,12 @@ DELETE FROM sql_course.teacher ORDER BY age DESC LIMIT 1;
 UPDATE sql_course.teacher SET sql_course.teacher.surname = "Jenkins" WHERE  age = 25;
 UPDATE sql_course.teacher SET sql_course.teacher.age = sql_course.teacher.age*2 WHERE  sql_course.teacher.id = 3;
 --SUBQUERIES
-SELECT 
-    *
-FROM
-    sql_course.teacher
-WHERE
-    sql_course.teacher.age > (SELECT 
-            AVG(sql_course.teacher.age)
-        FROM
-            sql_course.teacher);
+SELECT * FROM sql_course.teacher WHERE sql_course.teacher.age > (SELECT AVG(sql_course.teacher.age) FROM sql_course.teacher);
 DESCRIBE sql_course.teacher;
 ALTER TABLE  sql_course.teacher ADD column gender varchar(255) FIRST;
 ALTER TABLE  sql_course.teacher ADD column firstName varchar(255) after surname;
 DESCRIBE sql_course.teacher;
 ALTER TABLE  sql_course.teacher ADD column phone varchar(255) after age, ADD column adress varchar(255) after phone;
-ALTER TABLE sql_course.teacher MODIFY `phone` INT;
-ALTER TABLE sql_course.teacher CHANGE `phone` `phoneNumber` INT;
-ALTER TABLE sql_course.teacher DROP COLUMN gender;
-
-ALTER TABLE sql_course.teacher ADD index sname (surname);
-SHOW INDEX FROM sql_course.teacher;
-ALTER TABLE northwind.customers ADD index sCust (CustomerName, City, Country);
-SHOW INDEX FROM northwind.customers;
-EXPLAIN SELECT age, COUNT(age) FROM sql_course.teacher GROUP BY age;
-EXPLAIN SELECT * FROM northwind.customers WHERE Country ='France';
-SELECT * FROM northwind.customers WHERE Country ='France';
-EXPLAIN SELECT CustomerName FROM northwind.customers WHERE City ='London';
-EXPLAIN SELECT CustomerName FROM northwind.customers WHERE Country ='France';
-EXPLAIN ANALYZE SELECT CustomerName FROM northwind.customers WHERE Country ='France';
-
-START TRANSACTION;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age+1
-WHERE sql_course.teacher.id =2;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age-12
-WHERE sql_course.teacher.id =9;
-COMMIT;
-
-START TRANSACTION;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age+100
-WHERE sql_course.teacher.id =2;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age-1
-WHERE sql_course.teacher.id =9;
-ROLLBACK;
-
-START TRANSACTION;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age*0.5
-WHERE sql_course.teacher.id =2;
-SAVEPOINT before_second_part;
-UPDATE sql_course.teacher
-SET sql_course.teacher.age = sql_course.teacher.age/2
-WHERE sql_course.teacher.id =9;
-ROLLBACK TO before_second_part;
+ ALTER TABLE sql_course.teacher MODIFY `phone` INT;
+   ALTER TABLE sql_course.teacher CHANGE `phone` `phoneNumber` INT;
+       ALTER TABLE sql_course.teacher DROP COLUMN gender;

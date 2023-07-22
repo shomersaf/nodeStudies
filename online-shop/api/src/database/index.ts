@@ -6,7 +6,7 @@ const pool = mysql2.createPool({
     host: 'localhost',
     user: 'root',
     port: 3306,
-    password: "root",
+    password: "admin",
     database: 'northwind',
 });
 
