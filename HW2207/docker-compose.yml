@@ -1,0 +1,23 @@
+version: "1.0"
+
+services:
+  api2:
+    image: api2
+    build: ./api2
+    ports:
+      - "3000:3000"
+    networks:
+      - app-net
+  api1:
+    image: api1
+    build: ./api1
+    ports:
+      - "5000:5000"
+    networks:
+      - app-net
+    depends_on:
+            - api2
+   
+networks:
+  app-net:
+    driver: bridge
