@@ -12,7 +12,7 @@ const query2='SELECT * FROM northwind.employees;'
 employeesRouter.get("/",getEmployees)
 async function getEmployees(req:Request,res:Response,next:NextFunction){
 try{
-    const query = query1
+    const query = query2
  const result = await pool.execute(query)
  const [data] = result;
  console.log(result)
