@@ -3,23 +3,24 @@ import express, { Request, Response, NextFunction } from "express"
 import { pool } from "../database";
 
 const employeesRouter = express.Router();
-const firstDATE = '1955-03-04 00:00:00'
-const lastDate = '1960-05-29 00:00:00'
-const query1= `SELECT * 
-FROM northwind.employees  
-WHERE BirthDate BETWEEN '${firstDATE}' AND '${lastDate}'`
-const query2='SELECT * FROM northwind.employees;'
+
 employeesRouter.get("/",getEmployees)
 async function getEmployees(req:Request,res:Response,next:NextFunction){
-try{
-    const query = query2
- const result = await pool.execute(query)
- const [data] = result;
- console.log(result)
- res.json(data)
-
-}catch(error){
-    return next(error)
-}
+    try{
+        console.log("11111")
+        var firstDate = new Date(String(req.query.date1))
+        var secondDate = new Date(String(req.query.date2))
+        console.log(firstDate)
+        console.log(secondDate)
+        const query = `SELECT * 
+        FROM northwind.employees  
+        WHERE BirthDate BETWEEN '${String(req.query.date1)}' AND '${String(req.query.date2)}'`
+        const query2='SELECT * FROM northwind.employees;'
+        const result = await pool.execute(query)
+        const [data] = result;
+        res.json(data)
+    }catch(error){
+        return next(error)
+    }
 }
 export { employeesRouter };
