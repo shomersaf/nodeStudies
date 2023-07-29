@@ -33,7 +33,7 @@ export default function DbProductsPage() {
 
         getProducts()
         return () => {
-            console.log('Unmount products from db')
+            console.log('DB products are onmounted')
         }
     }, [])
     function handleFilter(e: any) {
