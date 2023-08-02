@@ -7,6 +7,8 @@ import { employeesRouter } from './employees';
 import { ordersRouter } from './orders';
 import { suppliersRouter } from './suppliers';
 import { shippersRouter } from './shippers';
+import { cartRouter } from './cart';
+
 dotenv.config()
 
 const app = express();
@@ -21,7 +23,7 @@ app.get("/health-check", function (req, res, next) {
 app.use("/products", productsRouter)
 app.use("/customers", customersRouter)
 app.use("/employees", employeesRouter)
-app.use("/customers", customersRouter)
+app.use("/cart", cartRouter)
 app.use("/orders", ordersRouter)
 app.use("/suppliers", suppliersRouter)
 app.use("/shippers", shippersRouter)

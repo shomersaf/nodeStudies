@@ -5,6 +5,8 @@ import { pool } from "../database";
 const productsRouter = express.Router();
 
 productsRouter.get("/",getProducts)
+
+
 async function getProducts(req:Request,res:Response,next:NextFunction){
 try{
     const query = `SELECT 
@@ -22,4 +24,6 @@ FROM
     return next(error)
 }
 }
+
+
 export { productsRouter };

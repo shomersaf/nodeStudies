@@ -9,8 +9,8 @@
 --     mysql
 --     Copy and paste the SQL below into the terminal window to create the Northwind database.
 
-CREATE DATABASE IF NOT EXISTS Northwind;
-USE Northwind;
+CREATE DATABASE IF NOT EXISTS northwind;
+USE northwind;
 
 DROP TABLE IF EXISTS OrderDetails;
 DROP TABLE IF EXISTS Orders;
@@ -20,6 +20,8 @@ DROP TABLE IF EXISTS Customers;
 DROP TABLE IF EXISTS Employees;
 DROP TABLE IF EXISTS Shippers;
 DROP TABLE IF EXISTS Suppliers;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Carts;
 
 START TRANSACTION;
 
@@ -49,6 +51,25 @@ CREATE TABLE Employees
     BirthDate DATETIME,
     Photo VARCHAR(25),
     Notes VARCHAR(1024)
+);
+
+CREATE TABLE Users
+(
+    UserID INTEGER PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    LastName VARCHAR(15) NULL,
+    FirstName VARCHAR(15) NULL,
+    Email VARCHAR(100) NOT NULL ,
+    HashedPassword VARCHAR(256) NOT NULL ,
+    Salt VARCHAR(100) NOT NULL 
+);
+
+CREATE TABLE Carts
+(
+    CartID INTEGER PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    UserID INTEGER NULL,
+	OrderID INTEGER NULL,
+    OrderDetailID INTEGER NULL,
+    OrderDAte DATETIME NULL
 );
 
 CREATE TABLE Shippers(

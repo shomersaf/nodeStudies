@@ -16,6 +16,8 @@ import OrdersPage from './pages/orders'
 import ShippersPage from './pages/shippers'
 import SuppliersPage from './pages/suppliers'
 import CustomersPage from './pages/customers'
+import CartsPage from './pages/cart'
+
 //import { useNavigate  } from "react-router-dom";
 
 
@@ -76,6 +78,18 @@ const routes: Array<IRoute> = [
     component: <ProductsPage />,
     key: "products",
     label: "Products"
+},
+{
+  path: "/cart",
+  component: <CartsPage />,
+  key: "cart",
+  label: "Carts"
+},
+{
+  path: "/carts/addToCart/ProductID/ProductName/ProductPrice/ProductQuantity",
+  component: <CartsPage />,
+  key: "myCart",
+  //label: "MY Cart"
 },
   {
       path: "*",
