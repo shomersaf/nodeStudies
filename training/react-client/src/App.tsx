@@ -33,7 +33,7 @@ const routes: Array<IRoute> = [
       path: "/login",
       component: <LoginPage />,
       key: "login",
-
+      label: "Login"
   },
  
   {
@@ -77,7 +77,7 @@ const routes: Array<IRoute> = [
     path: "/products",
     component: <ProductsPage />,
     key: "products",
-    label: "Products"
+     label: "Products"
 },
 {
   path: "/cart",

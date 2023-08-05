@@ -17,7 +17,7 @@ FROM
     northwind.categories ON northwind.products.CategoryID = northwind.categories.CategoryID`
  const result = await pool.execute(query)
  const [data] = result;
- console.log(result)
+ //console.log(result)
  res.json(data)
 
 }catch(error){
