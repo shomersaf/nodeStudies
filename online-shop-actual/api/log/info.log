@@ -2512,3 +2512,7 @@
 {"level":"info","message":"Request Started","path":"/customers/count","requestId":"b0bc384b-3bda-451f-a9fc-717bb0c26707","service":"api"}
 {"level":"info","message":"Request Finished","path":"/","requestId":"c56eef9e-aafa-41bb-8d5e-77700da7be59","service":"api"}
 {"level":"info","message":"Request Finished","path":"/count","requestId":"b0bc384b-3bda-451f-a9fc-717bb0c26707","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"355633e4-d970-49b8-814b-da5a14857ac3","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"2fec9053-0d54-492d-991b-bd5cba21df76","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"355633e4-d970-49b8-814b-da5a14857ac3","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"2fec9053-0d54-492d-991b-bd5cba21df76","service":"api"}

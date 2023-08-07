@@ -75,6 +75,8 @@ CREATE TABLE Carts
     ProductPrice INTEGER NULL, 
     ProductQuantity INTEGER NULL
 );
+ALTER TABLE `northwind`.`carts` 
+ADD COLUMN `Email` VARCHAR(45) NULL DEFAULT NULL AFTER `ProductQuantity`;
 
 CREATE TABLE Shippers(
     ShipperID INTEGER PRIMARY KEY AUTO_INCREMENT,

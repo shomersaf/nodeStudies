@@ -5,18 +5,16 @@ import { Column } from 'primereact/column';
 interface ICart {
     CartID:number, 
     ProductID:number,
-    ProductName:string,
     ProductPrice:number, 
     ProductQuantity:number, 
     OrderDAte: Date
 }
 
-export default function CartTable(props: { carts: Array<ICart>, extended?: boolean }) {
+export default function MyCartTable(props: { carts: Array<ICart>, extended?: boolean }) {
     const { extended = true } = props
     if (!props.carts[0]) return null;
     const columns = [<Column field={"CartID"} header={"CartID"}></Column>,
     <Column field={"ProductID"} header={"ProductID"}></Column>,
-    <Column field={"ProductName"} header={"ProductName"}></Column>,
     <Column field={"ProductPrice"} header={"ProductPrice"}></Column>,
     <Column field={"ProductQuantity"} header={"ProductQuantity"}></Column>,
     <Column field={"OrderDAte"} header={"OrderDAte"}></Column>]

@@ -25,6 +25,8 @@ export default function LoginPage() {
             email:getValues('email'),
             password:getValues('password')})
             result?.data? alert(`User is logged in`): new Error()
+           
+            localStorage.setItem("token", result.data.token)
             setTimeout(() => { navigate("/products") }, 500)
         }catch(e){
             alert("Something went wrong! Try again, please.")

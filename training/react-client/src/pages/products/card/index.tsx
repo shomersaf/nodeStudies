@@ -3,7 +3,7 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { useState} from "react"
 import { InputNumber } from 'primereact/inputnumber';
-
+import { useNavigate } from "react-router-dom"
 
 interface IProduct {
     id: number,
@@ -13,8 +13,10 @@ interface IProduct {
     price: number
 }
 
+
+
 export default function ProductsCard(props: { products: Array<IProduct> }) {
-    
+    const navigate = useNavigate()
     return props.products.map((key) => {
         const [quantity, setQuantity] = useState(1);
         return <Card style={{
@@ -33,17 +35,22 @@ export default function ProductsCard(props: { products: Array<IProduct> }) {
 
     function addToCart(ProductID:number, ProductName:string, ProductPrice:number, ProductQuantity:number) {
         Number(ProductPrice)
-       
+      const currentToken = localStorage.getItem("token")
+      console.log("currentToken: ", currentToken)
         postNewCart(ProductID,ProductName, ProductPrice, ProductQuantity)
         async function postNewCart(ProductID:number, ProductName:string, ProductPrice:number, ProductQuantity:number): Promise<Array<IProduct>> {
-            const { data} = await axios.post(`http://localhost:4001/cart/addToCart/${ProductID}/${ProductName}/${ProductPrice}/${ProductQuantity}`)
+            const { data} = await axios.post(`http://localhost:4001/cart/addToCart/${ProductID}/${ProductName}/${ProductPrice}/${ProductQuantity}`,{signedToken:currentToken})
             if (!data) throw new Error(`Error Please contact support`)
+            
         alert(`Added to Cart: ID: ${ProductID} Title: ${ProductName} Price: ${ProductPrice} Quantity: ${ProductQuantity}`)
-      
+       
+  
+        setTimeout(() => { navigate("/mycart") }, 500)
    
          return data
         }
     }
+
 
 
 }

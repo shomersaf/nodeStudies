@@ -16,7 +16,10 @@ import OrdersPage from './pages/orders'
 import ShippersPage from './pages/shippers'
 import SuppliersPage from './pages/suppliers'
 import CustomersPage from './pages/customers'
-import CartsPage from './pages/cart'
+import CartsPage from './pages/carts'
+import CartPage from './pages/cart'
+import { ProtectedRoute } from './pages/protected-route'
+
 
 //import { useNavigate  } from "react-router-dom";
 
@@ -86,10 +89,11 @@ const routes: Array<IRoute> = [
   label: "Carts"
 },
 {
-  path: "/carts/addToCart/ProductID/ProductName/ProductPrice/ProductQuantity",
-  component: <CartsPage />,
+  // path: "/carts/addToCart/ProductID/ProductName/ProductPrice/ProductQuantity",
+  path: "/mycart",
+  component:<ProtectedRoute><CartPage /></ProtectedRoute> ,
   key: "myCart",
-  //label: "MY Cart"
+  label: "MY Cart"
 },
   {
       path: "*",
