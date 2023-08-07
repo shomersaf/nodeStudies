@@ -4,8 +4,14 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import { Button } from 'primereact/button';
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { useEffect} from 'react';
 
 export default function LoginPage() {
+    useEffect(() => {
+            
+        localStorage.removeItem("token")
+      
+    }, [])
     interface ILogin {
         email: string,
         password: string
@@ -17,9 +23,10 @@ export default function LoginPage() {
         postLogin()
         reset()
     }
-
-
+    
     async function postLogin() {
+       
+        localStorage.removeItem("token")
         try{
             const result = await axios.post(`http://localhost:4001/login`, {
             email:getValues('email'),

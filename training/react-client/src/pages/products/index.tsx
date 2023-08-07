@@ -43,6 +43,7 @@ var filteredProducts = productsFilter ? products.filter((p: any) => p?.title?.to
     return <div style={{display:"flex", width:"100%", flexWrap:"wrap", justifyContent:"center"}}>
         <div>
         <h2>Products</h2>
+        <h3>For autorized users only - login or sign up for purchase</h3>
      <div><InputText onChange={filterHandler} />
       
 

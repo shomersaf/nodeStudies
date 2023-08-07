@@ -8,7 +8,7 @@ import RegistrationPage from './pages/registration'
 import "primereact/resources/themes/lara-light-indigo/theme.css"; 
 import "primereact/resources/primereact.min.css";  
 import 'primeicons/primeicons.css';
-import { Button } from 'primereact/button';
+//import { Button } from 'primereact/button';
 import React from "react";
 import {Link, Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -21,7 +21,8 @@ import CartPage from './pages/cart'
 import { ProtectedRoute } from './pages/protected-route'
 
 
-//import { useNavigate  } from "react-router-dom";
+
+
 
 
 interface IRoute {
@@ -84,16 +85,22 @@ const routes: Array<IRoute> = [
 },
 {
   path: "/cart",
-  component: <CartsPage />,
+  component: <ProtectedRoute><CartsPage /></ProtectedRoute>,
   key: "cart",
-  label: "Carts"
+ // label: "Carts"
 },
+
 {
-  // path: "/carts/addToCart/ProductID/ProductName/ProductPrice/ProductQuantity",
   path: "/mycart",
   component:<ProtectedRoute><CartPage /></ProtectedRoute> ,
   key: "myCart",
   label: "MY Cart"
+},
+{
+  path: "/login",
+  component: <LoginPage />,
+  key: "logout",
+  label: "Logout"
 },
   {
       path: "*",
@@ -104,17 +111,14 @@ const routes: Array<IRoute> = [
 
 
 function App() {
-   // const navigate = useNavigate();
-    function logoutHandler() {
-       // navigate("/login")
-    }
+
   return (
-    <div>
-    <div>
-        <Button onClick={logoutHandler}> Log Out</Button>
-    </div>
+    
+ 
+   
     <React.StrictMode>
   <Router>
+  {/* <Button onClick={logoutHandler}> Log Out</Button> */}
     <div>
         {routes.filter(r => r.label).map((route: IRoute) => {
             return <Link key={route.label} to={route.path} > {route.label} </Link>
@@ -127,7 +131,7 @@ function App() {
     </div>
     </Router>
     </React.StrictMode>
-</div>
+
   )
 }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import CartTable from "./table"
-import { Loader } from "../../ui/loader"
+//import { Loader } from "../../ui/loader"
 interface ICart {
     CartID:number, 
     ProductID:number,
@@ -29,7 +29,7 @@ export default function CartPage() {
  
     return <div >
      <h2>My Cart</h2>
-     {carts.length?<CartTable carts={carts} />  : <Loader />}
+     {carts.length?<CartTable carts={carts} />  : <h3>No carts found</h3>}
     
     </div>
 }
