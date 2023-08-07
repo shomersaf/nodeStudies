@@ -1,0 +1,33 @@
+{"level":"error","message":"Id is not a valid Number","service":"api"}
+{"level":"error","message":"Id is not a valid Number","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"Incorrect arguments to mysqld_stmt_execute","service":"api"}
+{"level":"error","message":"Incorrect arguments to mysqld_stmt_execute","service":"api"}
+{"level":"error","message":"Incorrect arguments to mysqld_stmt_execute","service":"api"}
+{"level":"error","message":"Incorrect arguments to mysqld_stmt_execute","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"connect ETIMEDOUT","service":"api"}
+{"level":"error","message":"connect ETIMEDOUT","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt expired","service":"api"}
+{"level":"error","message":"jwt expired","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"invalid signature","service":"api"}
+{"level":"error","message":"invalid signature","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"invalid token","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
