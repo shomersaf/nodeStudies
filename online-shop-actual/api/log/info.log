@@ -2507,3 +2507,8 @@
 {"level":"info","message":"Request Started","path":"/customers/count","requestId":"b4b84456-06c9-41ff-a8bd-32e945852186","service":"api"}
 {"level":"info","message":"Request Finished","path":"/","requestId":"1475336f-e050-4ca5-8820-8035b65cf7cc","service":"api"}
 {"level":"info","message":"Request Finished","path":"/count","requestId":"b4b84456-06c9-41ff-a8bd-32e945852186","service":"api"}
+{"level":"info","message":"Api is running on Port 4000","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"c56eef9e-aafa-41bb-8d5e-77700da7be59","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"b0bc384b-3bda-451f-a9fc-717bb0c26707","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"c56eef9e-aafa-41bb-8d5e-77700da7be59","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"b0bc384b-3bda-451f-a9fc-717bb0c26707","service":"api"}

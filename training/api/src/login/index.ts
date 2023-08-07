@@ -27,7 +27,7 @@ async function login(req:Request,res:Response,next:NextFunction){
         const isPasswordValid = bcrypt.compareSync(password,checkup[0]?.HashedPassword)
         //console.log(isPasswordValid)
         if(!isPasswordValid) { res.status(400)} else{
-            const signedToken = jsonwebtoken.sign({ Email: email, role: "admin" }, process.env.SECRET as string, { expiresIn: '60m' })
+            const signedToken = jsonwebtoken.sign({ userName: email, role: "admin" }, process.env.SECRET as string, { expiresIn: '60m' })
             console.log(signedToken)
             res.json({ token: signedToken})
             next()
