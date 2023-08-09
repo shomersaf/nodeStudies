@@ -24,13 +24,13 @@
 
 2. Create nodejs API
 + GET /Games ( this API will return all the games with the teams names and colors)
-- GET /team ( this API will return the team information according to the team name sent)
++ GET /team ( this API will return the team information according to the team name sent)
 + GET /teams (this API will return all the teams)
-- POST /team/new - create new team with all the relevant data
-- POST /game/new - create a game with time and score
++ POST /team/new - create new team with all the relevant data
++ POST /game/new - create a game with time and score
 3. Create React Client 
 + create the following routes
 + create a route for the games
-- create a route for the team details - по смфслу это фильтр
-- create a route for creating new team
-- create a route for creating a new game based on the existing teams
+- create a route for the team details - это переход по ссылке на страничку команды из списка команд
++ create a route for creating new team
++ create a route for creating a new game based on the existing teams

@@ -1,6 +1,8 @@
 import { Image } from 'primereact/image';
 import { Card } from 'primereact/card';
-
+import { Button } from 'primereact/button';
+import { useNavigate } from "react-router-dom"
+// import axios from "axios"
 interface ITeams {
     teamId: number,
     teamName: string,
@@ -13,7 +15,7 @@ interface ITeams {
 
 
 export default function TeamsCard(props: { teams: Array<ITeams> }) {
-
+    const navigate = useNavigate()
     return props.teams.map((key) => {
 
         return <Card style={{
@@ -29,12 +31,22 @@ export default function TeamsCard(props: { teams: Array<ITeams> }) {
             <div style={{background:key.secondaryColor,width:"100%",height:"20px", marginBottom:"20px"}}></div>
             
             <Image src={key.semel} alt="Image" width="250" />
-
+            <Button onClick={() => {     setTimeout(() => { navigate(`/team/info/${key.teamId}`) }, 500); }} style={{ marginLeft: "10px" }} >Team Page</Button>
         </Card>
     })
 
   
+  
+
+    //getTeamPage(key.teamId)
+        // async function getTeamPage(teamId: number): Promise<Array<ITeams>> {
+  
+        // const { data} = await axios.get(`http://localhost:4001/team/info/${teamId}`)
+        //     if (!data) throw new Error(`Error Please contact support`)
+       
+   
+        //  return data
+        // }
+    }
 
 
-
-}

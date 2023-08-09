@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { gamesRouter } from './games';
 import { teamRouter } from './team';
 import { teamsRouter } from './teams';
-
+import { gameRouter } from './game';
 dotenv.config()
 
 const app = express();
@@ -20,7 +20,7 @@ app.get("/health-check", function (req, res, next) {
 app.use("/games", gamesRouter)
 app.use("/team", teamRouter)
 app.use("/teams", teamsRouter)
-
+app.use("/game", gameRouter)
 
 // - GET /Games ( this API will return all the games with the teams names and colors)
 // - GET /team ( this API will return the team information according to the team name sent)
