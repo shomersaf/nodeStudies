@@ -22,9 +22,5 @@ app.use("/team", teamRouter)
 app.use("/teams", teamsRouter)
 app.use("/game", gameRouter)
 
-// - GET /Games ( this API will return all the games with the teams names and colors)
-// - GET /team ( this API will return the team information according to the team name sent)
-// - GET /teams (this API will return all the teams)
-// - POST /team/new - create new team with all the relevant data
-// - POST /game/new - create a game with time and score
+
 

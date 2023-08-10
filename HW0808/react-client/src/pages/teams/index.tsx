@@ -37,8 +37,8 @@ export default function TeamsPage() {
         <h2>Teams</h2>
         </div>
      <div style={{display:"flex", width:"100%", flexWrap:"wrap", justifyContent:"space-evenly"}}></div>
- 
-   {teams.length?  <TeamsCard teams={teams} />:<Loader />}
+
+   {teams.length?  <TeamsCard teams={teams}/>  :<Loader />}
     </div>
 }
 

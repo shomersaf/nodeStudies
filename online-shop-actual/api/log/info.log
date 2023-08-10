@@ -2516,3 +2516,90 @@
 {"level":"info","message":"Request Started","path":"/customers/count","requestId":"2fec9053-0d54-492d-991b-bd5cba21df76","service":"api"}
 {"level":"info","message":"Request Finished","path":"/","requestId":"355633e4-d970-49b8-814b-da5a14857ac3","service":"api"}
 {"level":"info","message":"Request Finished","path":"/count","requestId":"2fec9053-0d54-492d-991b-bd5cba21df76","service":"api"}
+{"level":"info","message":"Api is running on Port 4000","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"b382e637-3c77-45f8-9035-061f172743d1","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"397d1671-40fe-4cf4-abb0-f260bc714d04","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"b382e637-3c77-45f8-9035-061f172743d1","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"397d1671-40fe-4cf4-abb0-f260bc714d04","service":"api"}
+{"level":"info","message":"Request Started","path":"/countries","requestId":"6d27324d-bbf3-402e-bcba-5f973c31a585","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"6d27324d-bbf3-402e-bcba-5f973c31a585","service":"api"}
+{"level":"info","message":"Request Started","path":"/products/new","requestId":"bba71875-6920-4ef0-8356-ba4c9f33b1d4","service":"api"}
+{"level":"info","message":"Request Finished","path":"/new","requestId":"bba71875-6920-4ef0-8356-ba4c9f33b1d4","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"9b83ae62-740c-4386-ac52-5ae07ee0b6c5","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"9b83ae62-740c-4386-ac52-5ae07ee0b6c5","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"30bbdf53-e994-48b5-b753-900c6399c113","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"info","message":"Request Finished","path":"/user/info","requestId":"30bbdf53-e994-48b5-b753-900c6399c113","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"9e9963c9-c622-4a36-a62f-a1cd9a856f1c","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"d256671e-d343-4567-baed-0222676c0d65","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"9e9963c9-c622-4a36-a62f-a1cd9a856f1c","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"d256671e-d343-4567-baed-0222676c0d65","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"4c43dc70-a4f5-4e55-b597-ffbcca535c50","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"4c43dc70-a4f5-4e55-b597-ffbcca535c50","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"3232adb2-99fb-432c-a8a5-d853e5efa6f1","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"info","message":"Request Finished","path":"/user/info","requestId":"3232adb2-99fb-432c-a8a5-d853e5efa6f1","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"96cc4107-2f19-4bc2-9fe4-d87f39367912","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"96cc4107-2f19-4bc2-9fe4-d87f39367912","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"77c8758e-7810-4ca5-a608-3434330d9171","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"info","message":"Request Finished","path":"/user/info","requestId":"77c8758e-7810-4ca5-a608-3434330d9171","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"e159c535-73d5-43bf-a44b-98887a92e036","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"e159c535-73d5-43bf-a44b-98887a92e036","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"5ea073c1-8c23-4e11-8c74-df9c2fdb3603","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"info","message":"Request Finished","path":"/user/info","requestId":"5ea073c1-8c23-4e11-8c74-df9c2fdb3603","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"b92cd729-1b11-41b6-aea4-653f958e273b","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"b92cd729-1b11-41b6-aea4-653f958e273b","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"f9a7ca96-f2c8-4652-aa7e-8af3fcb78f1a","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"error","message":"Bind parameters must not contain undefined. To pass SQL NULL specify JS null","service":"api"}
+{"level":"info","message":"Request Finished","path":"/user/info","requestId":"f9a7ca96-f2c8-4652-aa7e-8af3fcb78f1a","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"7800b742-40f3-4519-a835-b64806a9ad0b","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"f59ce4ee-d49f-4441-a7c1-a3f10c678308","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"7800b742-40f3-4519-a835-b64806a9ad0b","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"f59ce4ee-d49f-4441-a7c1-a3f10c678308","service":"api"}
+{"level":"info","message":"Request Started","path":"/auth/sign-up","requestId":"141774b6-8e1d-460c-ba13-134570d12a10","service":"api"}
+{"level":"info","message":"Request Finished","path":"/sign-up","requestId":"141774b6-8e1d-460c-ba13-134570d12a10","service":"api"}
+{"level":"info","message":"Request Started","path":"/auth/login","requestId":"830222d9-f30b-469d-96f5-c42e1ac42081","service":"api"}
+{"level":"info","message":"Request Finished","path":"/login","requestId":"830222d9-f30b-469d-96f5-c42e1ac42081","service":"api"}
+{"level":"info","message":"Request Started","path":"/auth/login","requestId":"7c852401-e7f9-4847-968b-5e7b9cba37c5","service":"api"}
+{"level":"info","message":"Request Finished","path":"/login","requestId":"7c852401-e7f9-4847-968b-5e7b9cba37c5","service":"api"}
+{"level":"info","message":"Request Started","path":"/countries","requestId":"16e9685d-4c67-46bc-9f35-f0b8a8017b33","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"16e9685d-4c67-46bc-9f35-f0b8a8017b33","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"63dfa4f2-cddb-49e9-bfa5-57a1b652b9d8","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"63dfa4f2-cddb-49e9-bfa5-57a1b652b9d8","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"5d514c1d-8e37-4eae-bdbd-6a0f395671bc","service":"api"}
+{"level":"info","message":"Request Finished","path":"/info","requestId":"5d514c1d-8e37-4eae-bdbd-6a0f395671bc","service":"api"}
+{"level":"info","message":"Request Started","path":"/products/new","requestId":"fdc398d0-f70a-43aa-815d-f5b3ebf0c93a","service":"api"}
+{"level":"info","message":"Request Finished","path":"/new","requestId":"fdc398d0-f70a-43aa-815d-f5b3ebf0c93a","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"9ca8ca56-2545-4080-9aa2-f1e370ee1d6a","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"9ca8ca56-2545-4080-9aa2-f1e370ee1d6a","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"cede4a7f-dd44-4339-b905-fdb139071840","service":"api"}
+{"level":"info","message":"Request Finished","path":"/info","requestId":"cede4a7f-dd44-4339-b905-fdb139071840","service":"api"}
+{"level":"info","message":"Request Started","path":"/products","requestId":"090d136b-1c94-41cd-bd40-19a208e9ca66","service":"api"}
+{"level":"error","message":"jwt must be provided","service":"api"}
+{"level":"info","message":"Request Finished","path":"/products","requestId":"090d136b-1c94-41cd-bd40-19a208e9ca66","service":"api"}
+{"level":"info","message":"Request Started","path":"/user/info","requestId":"3a975ada-14fd-422a-b83a-13d43e99a520","service":"api"}
+{"level":"info","message":"Request Finished","path":"/info","requestId":"3a975ada-14fd-422a-b83a-13d43e99a520","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"873b756a-35b3-4bf8-a6b9-ee7d9d4e9fa7","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"294b0de5-b317-41bf-b785-4b65fd613270","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"873b756a-35b3-4bf8-a6b9-ee7d9d4e9fa7","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"294b0de5-b317-41bf-b785-4b65fd613270","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers","requestId":"6360e490-a469-4fbf-a2b9-9108afac4296","service":"api"}
+{"level":"info","message":"Request Started","path":"/customers/count","requestId":"5aef129c-c889-4065-8a68-eb807a9c3eff","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"6360e490-a469-4fbf-a2b9-9108afac4296","service":"api"}
+{"level":"info","message":"Request Finished","path":"/count","requestId":"5aef129c-c889-4065-8a68-eb807a9c3eff","service":"api"}
+{"level":"info","message":"Request Started","path":"/countries","requestId":"000038be-b817-486d-a670-b126d3219a92","service":"api"}
+{"level":"info","message":"Request Finished","path":"/","requestId":"000038be-b817-486d-a670-b126d3219a92","service":"api"}
