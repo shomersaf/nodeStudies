@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  dbase:
+    image: mysql
+    build: ./dbase
+    command: --lower_case_table_names=1
+    container_name: dbase
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - "./dbase/mysql:/docker-entrypoint-initdb.d"  
+    
+  api:
+    image: api2
+    build: ./api
+    ports:
+      - "4001:4001"
+    networks:
+      - app-net
+  react-client:
+    image: react-client2
+    build: ./react-client
+    ports:
+      - "5173:5173"
+    networks:
+      - app-net
+    depends_on:
+            - api
+   
+networks:
+  app-net:
+    driver: bridge
