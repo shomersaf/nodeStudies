@@ -12,7 +12,9 @@ export default function TeamsCard(props: { teams: Array<ITeams> }) {
             color: "purple", margin: "10px",
             width: "fitContent",
             padding: "10px",
-            border: "1px solid black"
+
+            border: "6px solid white",
+            backgroundColor:" rgb(187, 187, 211)"
         }}
             title={e.teamName} key={e.teamName}>  
             <h2>{'id: '+ e.id}</h2>

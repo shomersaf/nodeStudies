@@ -3,8 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: rgb(212, 212, 233);
 }
-
+body{
+  background: rgb(102, 102, 116);
+}
+h1{
+  text-transform: uppercase;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

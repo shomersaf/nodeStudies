@@ -15,7 +15,8 @@ export default function MeetingsCard(props: { meetings: Array<IMeetings> }) {
             color: "purple", margin: "10px",
             width: "fitContent",
             padding: "10px",
-            border: "1px solid black"
+            border: "6px solid white",
+            backgroundColor:" rgb(187, 187, 211)"
         }}
             title={e.teamName} key={e.meetupId}>  
             <h2>{'teamName: '+ e.teamName}</h2>

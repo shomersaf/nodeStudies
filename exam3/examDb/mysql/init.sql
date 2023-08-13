@@ -18,3 +18,7 @@ CREATE TABLE meetings (
   KEY teamId_idx (teamId),
   CONSTRAINT teamId FOREIGN KEY (teamId) REFERENCES `teams` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `exam`.`teams` (`teamName`) VALUES ('First Team');
+INSERT INTO `exam`.`teams` (`teamName`) VALUES ('Second Team');
+INSERT INTO `exam`.`teams` (`teamName`) VALUES ('Third Team');
