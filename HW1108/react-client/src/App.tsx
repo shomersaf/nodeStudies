@@ -35,7 +35,7 @@ const routes: Array<IRoute> = [
   path: "/",
   component: <CarsPage />,
   key: "cars",
-  label: "Cars |"
+ // label: "Cars |"
 },
   {
     path: "/rentals",
