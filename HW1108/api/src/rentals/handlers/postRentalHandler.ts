@@ -6,7 +6,6 @@ async function postRentalHandler(
   toDate:any,
   pricePerDay:number)
 {
- 
   if (isNaN(pricePerDay))
     throw new Error("pricePerDay should be a number");
   const query1 = `SELECT id FROM carrental.cars WHERE car =?;`;
