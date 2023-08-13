@@ -6,10 +6,11 @@ import RentalsCard from "./card"
 interface IRentals {
     rentId:number,
     carId:number,
+    car:string,
     fromDate:Date,
     toDate:Date,
     pricePerDay:number,
-    total:number
+    total:number,
     }
 
 export default function RentalsPage() {
@@ -50,6 +51,7 @@ async function getAllCarsService(): Promise<Array<IRentals>> {
         return {
             rentId:r.rentId,
             carId:r.carId,
+            car:r.car,
             fromDate:r.fromDate,
             toDate:r.toDate,
             pricePerDay:r.pricePerDay,

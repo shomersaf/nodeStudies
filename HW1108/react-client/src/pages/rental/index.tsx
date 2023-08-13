@@ -32,23 +32,25 @@ export default function RentalPage() {
     const [car, setCar] = useState<any>()
     const [cars, setCars] = useState<Array<ICars>>([])
     const onSubmit: SubmitHandler<IRental> = () => {
-    //    setCars(cars)
-        postCar()
-        reset()
+        if (!car) { alert(`No car selected`) } else {
+            postCar()
+            reset()
+        }
     }
 
 
     async function postCar( ) {
         try{
+ 
             const result = await axios.post(`http://localhost:4001/rentals/new`, {
-            car: car.car,//the problem is here
+            car: car.car,
             fromDate:new Date(fromDate).toISOString().replace("Z", " ").slice(0, 19),
             toDate:new Date(toDate).toISOString().replace("Z", " ").slice(0, 19),
             pricePerDay:getValues('pricePerDay')})
-            if(result?.data)  alert(`The new rental is added`)
+            if(result?.data) alert(`The new rental is added`)
             setTimeout(() => { navigate("/rentals") }, 500)
         }catch(e){
-            alert("Something went wrong!")
+            alert(`The rental already exists. Select another car or another dates, please`)
         }
     }
 
