@@ -24,7 +24,7 @@ export function Counter() {
 
     return (
         <div style={{background:"yellow"}}>
-            <h2>AssyncOperationStatus component</h2>
+            <h2>Counter component</h2>
             {"Countries number: " + cNumber || 0}
             <div className={styles.row}>
                 <button
