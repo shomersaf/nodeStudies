@@ -79,7 +79,7 @@ export const counterSlice = createSlice({
                 state.status = "fulfilled"
                 //state.value += action.payload
                 state.countries= []
-                state.countruesLength += action.payload.length
+                state.countruesLength = action.payload.length
 
             })
             .addCase(fetchCountriesAsync.rejected, (state) => {
