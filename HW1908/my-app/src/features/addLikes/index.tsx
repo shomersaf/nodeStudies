@@ -17,10 +17,10 @@ export default function AddLikes() {
     console.log(sum)
   }, [vacations]);
 
-    return <div>
+    return <div className="addLikesDiv">
     <h1>AddLikes</h1>
     <button className={styles.button} onClick={()=>{dispatch(addLike(destination?.toLowerCase()))}}>Add Likes</button>
      Vacation destination: <input type="text" value={destination} onChange={(e)=>{setAppDestination(e.target.value)}} />
-     <h2>Total likes: {totalLikes} </h2>
+     <h2>Total likes: <span className="likes">{totalLikes}</span> </h2>
     </div>
 }

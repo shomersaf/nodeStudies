@@ -42,7 +42,9 @@ h3{
   height: 40vmin;
   pointer-events: none;
 }
-
+.addLikesDiv{
+  background:rgb(220, 243, 212);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;
