@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import counterReducer from "../features/counter/counterSlice"
+import  vacationsReducer  from "../features/vacations/vacationsSlice"
+
+
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    vacations: vacationsReducer
   },
 })
 

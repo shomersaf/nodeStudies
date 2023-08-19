@@ -1,10 +1,17 @@
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
+import MainComponent from "./features/main"
 import "./App.css"
+import Vacations from "./features/vacations"
+import AddLikes from "./features/addLikes"
+
 
 function App() {
   return (
     <div className="App">
+      <MainComponent />
+      <Vacations />
+      <AddLikes />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
