@@ -22,7 +22,7 @@ export const initialState: IVacations = {
     },
     { destination: "Timbobungo",
      likes: 120,
-     whoIs: "Tomer Rozental",
+     whoIs: "somebody",
      src: "https://proza.ru/pics/2021/06/30/908.jpg",
     },
 
