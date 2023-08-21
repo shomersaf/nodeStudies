@@ -4,6 +4,7 @@ import Search from "../../components/Search";
 import {useEffect} from 'react'
 import { fetchAirports } from "../../store/actions/airportActions";
 import { useAppDispatch } from "../../hooks/redux";
+import React from "react";
 
 export default function MainPage(){
     const dispatch = useAppDispatch()
@@ -12,7 +13,7 @@ export default function MainPage(){
     },[])
     return(
         <div>
-            <h2 className="container mx-auto max-w-[fit-content] pt-5">Home</h2>
+            <h2>Home</h2>
             <Search />
             <Filter />
             <DetailsCard />

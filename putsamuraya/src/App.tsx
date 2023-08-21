@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage'
 import Auth from './pages/Auth'
 import Details from './pages/Details'
 import Navigation from './components/Navigation'
+import React from 'react'
 
 function App() {
 

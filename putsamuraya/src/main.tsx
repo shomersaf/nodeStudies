@@ -1,10 +1,12 @@
 
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import { setupStore } from './store/index.ts'
+import { setupStore } from './store'
 import { Provider } from 'react-redux'
+import React from 'react'
+import App from './App'
 
 const store = setupStore()
 
