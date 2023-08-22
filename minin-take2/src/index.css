@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color:rgb(1, 41, 43);
+  text-align: center;
+  color:rgb(0, 255, 255);
+  margin:0;
+  padding: 0;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding:10px 20px;
+  color: rgb(0, 255, 170);
+  background-color: rgb(101, 161, 141);
+ text-transform: uppercase;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+nav a:hover{
+font-size: larger;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  padding: 5px;
+}
