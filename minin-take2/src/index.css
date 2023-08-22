@@ -1,13 +1,17 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color:rgb(1, 41, 43);
+  background-color:rgb(2, 36, 36);
   text-align: center;
   color:rgb(0, 255, 255);
   margin:0;
   padding: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 .nav{
   display: flex;
@@ -15,22 +19,132 @@ body{
   align-items: center;
   height: 50px;
   padding:10px 20px;
-  color: rgb(0, 255, 170);
+  color: rgb(0, 255, 102);
   background-color: rgb(101, 161, 141);
  text-transform: uppercase;
+ 
 }
 nav a{
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 20px;
 }
 nav a:hover{
-font-size: larger;
+font-size:24px;
 }
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 150px;
+  width: 200px;
   padding: 5px;
+}
+.wentWrong{
+  font-weight: bold;
+  color: #ff7474;
+  text-align: center;
+}
+.loading{
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+ padding: 0;
+ height: 500px;
+ overflow-y: scroll;
+ 
+}
+li{
+  background-color: rgb(101, 161, 141);
+  padding: 10px;
+  color:rgb(2, 27, 18);
+  width: 500px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 5px double rgb(0, 255, 38);
+}
+li:hover{
+  background-color: rgb(5, 58, 67);
+  color: aqua;
+}
+li:focus{
+  background-color: rgb(5, 58, 67);
+  color: aqua;
+}
+input{
+  background-color:inherit;
+  border:none;
+  border-bottom: 1px solid white;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  height: 50px;
+  color:azure;
+  padding-left: 20px;
+  font-size: 20px;
+}
+.repoCard{
+  border:none;
+  border-right: 1px solid lime;
+  border-left: 1px solid lime;
+  width: 450px;
+  margin: auto;
+  border-radius: 20px;
+
+  padding:10px;
+  color: #67cd8e;
+  text-align: left;
+  padding-left: 20px;
+}
+.repoCard span{
+  text-transform: uppercase;
+ font-weight: bold;
+}
+/* .repoCard h2{
+  text-align: center;
+} */
+h3{
+  color:lime;
+  text-transform: uppercase;
+}
+.repoCard span:nth-child(2){
+margin-left: 10px;
+}
+.aRepo{
+  text-decoration: none;
+  cursor: pointer;
+}
+.repoCard:hover{
+color: #0ba79f;
+}
+button{
+  width: fit-content;
+  height: fit-content;
+  padding:10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+.addButton{
+  background: #68a2c6;
+}
+.addButton:hover{
+  background: #10547b;
+  color:white;
+}
+.removeButton{
+  background: #ff8080;
+}
+.removeButton:hover{
+  background: #831a1a;
+  color:white;
 }
