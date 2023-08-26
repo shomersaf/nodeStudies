@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 8,
+      "title": "refresh data",
+      "body": "typicode"
+    },
+    {
+      "id": 9,
+      "title": "json-server 9",
+      "body": "typicode"
+    },
+    {
+      "id": 10,
+      "title": "json-server 10",
+      "body": "typicode"
+    },
+    {
+      "id": 11,
+      "title": "json-server 11",
+      "body": "typicode"
+    },
+    {
+      "title": "123123",
+      "body": "123123",
+      "id": 12
+    },
+    {
+      "title": "NEW POST",
+      "body": "NEW POST",
+      "id": 14
+    },
+    {
+      "title": "123123",
+      "body": "123123",
+      "id": 16
+    },
+    {
+      "title": "akikuya",
+      "body": "akikuya",
+      "id": 17
+    },
+    {
+      "title": "create new post",
+      "body": "create new post",
+      "id": 18
+    },
+    {
+      "title": "sovsem novy",
+      "body": "sovsem novy",
+      "id": 19
+    },
+    {
+      "title": "uuu",
+      "body": "uuu",
+      "id": 20
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
