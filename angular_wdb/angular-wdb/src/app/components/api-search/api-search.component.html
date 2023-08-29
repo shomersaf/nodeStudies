@@ -1,0 +1,20 @@
+<div class="searchDiv">
+    <div class="searchFor">
+      <span class="searchSpan">github search:</span>
+
+<input type="text" [(ngModel)]="userName" plaseholder="user name">
+<button class="gitHbtn" (click)="search()">Search</button>
+</div>
+<div class="users" *ngIf="response">
+<img src="{{response.avatar_url}}" alt="">
+<div class="usersData">
+  <p>Name: {{response.login}}</p>
+<p>Repos: {{response.public_repos}}</p>
+<p>Bio: {{response.bio}}</p>
+<p>Blog: {{response.blog}}</p>
+<p>Company: {{response.company}}</p>
+<p>Created at: {{created}}</p>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+<button class="picBtn" (click)="showPics()">{{showOrHide}} pictures</button>
+<div [ngClass]="{picsDiv:true}" *ngIf="isVisible">
+ 
+  <img
+    *ngFor="let picture of pictures; let first = first; let last = last;
+    let even=even; let odd=odd;"
+    [ngClass]="{ first: first, last: last, even:even, odd:odd }"
+    src="{{ picture }}"
+    alt="{{ picture }}"
+    title="{{ last }}"
+  />
+</div>
+<button class="visibilityBtn" (click)="toggle()">Toggle</button>
+<div [ngClass]="{invisible:visibility}">
+  <h2>There always are some magic words...</h2>
+  <p>I should recall them afterwards</p>
+  <p>I'll try to put them on the chords!</p>
+
+</div>
+
+
+
