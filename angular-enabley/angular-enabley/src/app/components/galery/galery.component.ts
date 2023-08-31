@@ -25,6 +25,7 @@ visible = false;
 //   ]
 selectedPic='';
 playing:any;
+i=0;
 @Input() pics:string[]=[];
 @Output() selectEvent = new EventEmitter<any>();
 
@@ -33,10 +34,19 @@ showSelected(selectedPic: any){
 }
 
 play(){
-this.playing = setInterval(()=>{
-    console.log("I run every 2 seconds indefinitely");
-    }, 2000)
+      this.playing = setInterval(()=>{
+       this.selectedPic = this.pics[this.i]; 
+          if(this.pics[this.i]) {
+            this.pics.splice(this.i,1);
+          this.i++;}else{
+           this.selectedPic = this.pics[this.i-1]; 
+            this.pics.splice(this.i-1,1);
+        } 
+        this.pics.unshift(this.selectedPic);
+      }, 1000)
   }
+
+
   stop(){
     clearInterval(this.playing);
     }

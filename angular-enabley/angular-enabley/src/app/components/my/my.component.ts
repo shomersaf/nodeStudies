@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponent implements OnInit {
   myWorks:string[]=[
+    
     'https://cdna.artstation.com/p/assets/images/images/024/035/132/large/stacey-steshin-3.jpg?1581100157',
     'https://cdnb.artstation.com/p/assets/images/images/024/131/565/large/stacey-steshin-nas-diplom12.jpg?1581423122',
     'https://cdna.artstation.com/p/assets/images/images/038/507/084/large/stacey-steshin-2.jpg?1623271923',
