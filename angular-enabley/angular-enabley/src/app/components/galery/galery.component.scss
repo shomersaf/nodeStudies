@@ -1,0 +1,28 @@
+.roseFrame{
+    height: 70px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+&.selectedPic{
+   width:100%;
+   height:600px;
+}
+&:hover{
+ opacity: 80%;
+ cursor:pointer;
+     }
+  }
+.gallery{
+width:860px;
+display: flex;
+margin: 10px auto;
+flex-wrap: wrap;
+justify-content:space-between;
+align-items: center;
+}
+
+button{
+    margin-top: 10px;
+}

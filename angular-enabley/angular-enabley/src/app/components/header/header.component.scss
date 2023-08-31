@@ -1,0 +1,11 @@
+@import './../../../variables.scss';
+
+header{
+    width: inherit;
+    background-color: $headerBgColor;
+    height: 100px;
+    color:$headerTxtColor;
+display: flex;
+align-items: center;
+justify-content: center;
+}

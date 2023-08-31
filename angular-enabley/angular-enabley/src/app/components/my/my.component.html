@@ -1,0 +1,31 @@
+<div class="my">
+    <select>
+        <option>C#</option>
+        <option>VB</option>
+        <option>COBOL</option>
+        <option selected>Typescript</option>
+
+    </select>
+    <div class="searchDiv">
+        <input type="search" class="searchInput" #searchInput (input)="searchWord=searchInput.value" (blur)="search()">
+        <button (click)="search()" [disabled] = "searchWord.length ===0">{{searchTitle}}</button>
+        <br />
+        <span [hidden] = "!isBusy">loading...</span>
+    </div>
+    <div>
+        <h3 *ngIf="searchWord">
+            Result:
+        </h3>
+        
+    <app-result [list]="results" (itemSelected)="setSelectedFromAppResult($event)" [selectedItem]='selectedItemMyComponent'></app-result>
+    <hr>
+       <h2>selected:</h2>
+       <img src= {{selectedFromGallery}} alt="" class="selectedFromGallery">
+       <hr>
+    <app-input-and-outputs [newpic]="'https://w.forfun.com/fetch/92/92c64ec84ed9b114bf59508cf80b6254.jpeg'"></app-input-and-outputs>
+        <app-galery [pics]="picsHere" (selectEvent)="getSelectedFromGallery($event)"></app-galery>
+     
+        <app-galery [pics]="myWorks"></app-galery>
+    </div>
+</div>
+<h2 *ngIf="selectedItemMyComponent">Selected Item: {{selectedItemMyComponent}}</h2>

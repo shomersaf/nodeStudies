@@ -1,0 +1,35 @@
+
+@import './variables.scss';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:$mainBgColor;
+    color: $mainFontColor;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+button{
+    height: $BtnH;
+    margin-left: 20px;
+    background-color: $buttonBgColor;
+    color: $ButtonTxtColor;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border:none;
+}
+button:hover, button:active{
+    background-color: $buttonHooverBgColor;
+}
