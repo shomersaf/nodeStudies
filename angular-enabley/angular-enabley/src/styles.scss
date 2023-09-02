@@ -14,7 +14,6 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 h1{
-    text-transform: uppercase;
     text-align: center;
 }
 button{
@@ -32,4 +31,12 @@ button{
 }
 button:hover, button:active{
     background-color: $buttonHooverBgColor;
+}
+.is-not-valid{
+
+    outline:3px solid red;
+}
+h3{
+    margin-left: 10px;
+    margin-right: 10px;
 }

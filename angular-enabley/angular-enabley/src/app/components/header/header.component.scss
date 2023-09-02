@@ -3,7 +3,7 @@
 header{
     width: inherit;
     background-color: $headerBgColor;
-    height: 100px;
+    height: fit-content;
     color:$headerTxtColor;
 display: flex;
 align-items: center;

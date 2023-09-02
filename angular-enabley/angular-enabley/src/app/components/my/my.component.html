@@ -7,7 +7,7 @@
 
     </select>
     <div class="searchDiv">
-        <input type="search" class="searchInput" #searchInput (input)="searchWord=searchInput.value" (blur)="search()">
+        <input type="search" class="searchInput" #searchInput (input)="searchWord=searchInput.value" (blur)="search()" appOnlyHebrew>
         <button (click)="search()" [disabled] = "searchWord.length ===0">{{searchTitle}}</button>
         <br />
         <span [hidden] = "!isBusy">loading...</span>

@@ -11,6 +11,8 @@ import { MainComponent } from './components/main/main.component';
 import { ResultComponent } from './components/result/result.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { InputAndOutputsComponent } from './components/input-and-outputs/input-and-outputs.component';
+import { OnlyHebrewDirective } from './directives/only-hebrew.directive';
+import { SuffixPipe } from './pipes/suffix.pipe';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { InputAndOutputsComponent } from './components/input-and-outputs/input-a
     MainComponent,
     ResultComponent,
     GaleryComponent,
-    InputAndOutputsComponent ],
+    InputAndOutputsComponent,
+    OnlyHebrewDirective,
+    SuffixPipe ],
   imports: [
     BrowserModule,
     AppRoutingModule

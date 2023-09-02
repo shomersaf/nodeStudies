@@ -1,1 +1,10 @@
-<header><h1>Welcome to my Resume Web Site</h1></header>
+<header><h1>{{welcome | uppercase | suffix:'.':suffixCount}}</h1>
+<div>
+    <input type="text" class="text" appOnlyHebrew>
+</div>
+<div>
+    <textarea name="" id="" cols="30" rows="3" appOnlyHebrew></textarea>
+</div>
+<h3>{{birthDate | date: 'dd/MM/yy'}}</h3>
+<h4>{{pipeHolder | suffix}}</h4>
+</header>
