@@ -17,6 +17,8 @@ import { HideafterDirective } from './directives/hideafter.directive';
 import { ScrolldownDirective } from './directives/scrolldown.directive';
 import { ToMinHoursPipe } from './pipes/to-min-hours.pipe';
 import { AgePipe } from './pipes/age.pipe';
+import { GalleryUnitsComponent } from './components/gallery-units/gallery-units.component';
+import { GUnitComponent } from './components/g-unit/g-unit.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { AgePipe } from './pipes/age.pipe';
     HideafterDirective,
     ScrolldownDirective,
     ToMinHoursPipe,
-    AgePipe ],
+    AgePipe,
+    GalleryUnitsComponent,
+    GUnitComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule
