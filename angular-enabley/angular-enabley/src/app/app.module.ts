@@ -13,6 +13,10 @@ import { GaleryComponent } from './components/galery/galery.component';
 import { InputAndOutputsComponent } from './components/input-and-outputs/input-and-outputs.component';
 import { OnlyHebrewDirective } from './directives/only-hebrew.directive';
 import { SuffixPipe } from './pipes/suffix.pipe';
+import { HideafterDirective } from './directives/hideafter.directive';
+import { ScrolldownDirective } from './directives/scrolldown.directive';
+import { ToMinHoursPipe } from './pipes/to-min-hours.pipe';
+import { AgePipe } from './pipes/age.pipe';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { SuffixPipe } from './pipes/suffix.pipe';
     GaleryComponent,
     InputAndOutputsComponent,
     OnlyHebrewDirective,
-    SuffixPipe ],
+    SuffixPipe,
+    HideafterDirective,
+    ScrolldownDirective,
+    ToMinHoursPipe,
+    AgePipe ],
   imports: [
     BrowserModule,
     AppRoutingModule

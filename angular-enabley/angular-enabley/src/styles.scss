@@ -1,22 +1,24 @@
-
 @import './variables.scss';
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color:$mainBgColor;
+
+body {
+    background-color: $mainBgColor;
     color: $mainFontColor;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-button{
+
+button {
     height: $BtnH;
     margin-left: 20px;
     background-color: $buttonBgColor;
@@ -27,16 +29,106 @@ button{
     padding-right: 10px;
     border-radius: 10px;
     cursor: pointer;
-    border:none;
+    border: none;
 }
-button:hover, button:active{
+
+button:hover,
+button:active {
     background-color: $buttonHooverBgColor;
 }
-.is-not-valid{
 
-    outline:3px solid red;
+.is-not-valid {
+    outline: 3px solid red;
 }
-h3{
+
+h3 {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.invisible {
+    display: none;
+}
+
+.tirgulB {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tirgulB h1 {
+    cursor: pointer;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tirgulB h1:hover {
+    background: #096f7a;
+}
+
+.pipesA {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(255, 127, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pipesA h1 {
+    cursor: pointer;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.pipesA h1:hover {
+    background: #7a095a;
+}
+
+.pipesA p {
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tirgul {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tirgul h1 {
+    cursor: pointer;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tirgul h1:hover {
+    background: #096f7a;
+}
+
+.tirgulim {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
